@@ -31,6 +31,10 @@ self_ask_with_search_openai = SelfAskWithSearchChain(llm=gpt3,
                                                      verbose=False)
 
 st.set_page_config(page_title="AceTray", page_icon=":alien:")
+
+st.title("SearchGPT")
+st.sidebar.success("Main Menu")
+
 st.header("Ace Tray | Mini Amps")
 col1, col2 = st.columns(2)
 
@@ -50,7 +54,7 @@ st.markdown("### Ask Anything")
 
 
 def get_text():
-  usr_query = st.text_area(label="", placeholder="")
+  usr_query = st.text_area(label="Your question", placeholder="")
   return usr_query
 
 
